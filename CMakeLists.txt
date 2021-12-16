@@ -3,6 +3,12 @@ project(Design_Patterns)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Design_Patterns main.cpp src/singleton.cpp src/abstract_factory.cpp)
+set(sources main.cpp)
 
-target_include_directories(Design_Patterns PUBLIC include)
+add_executable(main ${sources})
+
+add_subdirectory(generative_patterns)
+
+target_link_libraries(main Generative_patterns_lib)
+
+# target_include_directories(main PRIVATE generative_patterns/include)
