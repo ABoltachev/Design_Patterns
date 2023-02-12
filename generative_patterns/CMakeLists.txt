@@ -1,13 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
-project(Generative_patterns_lib)
+project(GenerativePatternsLib)
 
-set(CMAKE_CXX_STANDARD 14)
-
-# set(sources src/singleton.cpp
-#             src/abstract_factory.cpp)
+set(CMAKE_CXX_STANDARD 17)
 
 file(GLOB sources src/*.cpp)
 
-add_library(Generative_patterns_lib SHARED ${sources})
+add_library(generative_patterns SHARED ${sources})
 
-target_include_directories(Generative_patterns_lib PUBLIC include)
+target_include_directories(generative_patterns PUBLIC include)

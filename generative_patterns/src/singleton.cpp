@@ -1,4 +1,4 @@
-#include "singleton.h"
+#include <singleton/singleton.hpp>
 
 namespace DesignPatterns {
     namespace Generative {

@@ -1,13 +1,13 @@
-#include "abstract_factory.h"
+#include <abstract_factory/abstract_factory.hpp>
 
 
 namespace DesignPatterns {
     namespace Generative {
-        std::string KitchenChair::getChairType() {
+        std::string KitchenChair::getChairType() const {
             return "KitchenChair";
         }
 
-        std::string KitchenTable::getTableType() {
+        std::string KitchenTable::getTableType() const {
             return "KitchenTable";
         }
 
@@ -18,11 +18,11 @@ namespace DesignPatterns {
             return new KitchenTable;
         }
 
-        std::string OfficeChair::getChairType() {
+        std::string OfficeChair::getChairType() const {
             return "OfficeChair";
         }
 
-        std::string OfficeTable::getTableType() {
+        std::string OfficeTable::getTableType() const {
             return "OfficeTable";
         }
 

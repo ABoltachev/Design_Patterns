@@ -1,5 +1,11 @@
-#ifndef DESIGN_PATTERNS_ABSTRACT_FACTORY_H
-#define DESIGN_PATTERNS_ABSTRACT_FACTORY_H
+#ifndef DESIGN_PATTERNS_ABSTRACT_FACTORY_HPP
+#define DESIGN_PATTERNS_ABSTRACT_FACTORY_HPP
+
+/*
+    AbstractFactory создает семейства связанных объектов без поривязки к конкретным классам
+    Проблемы, которые решает:
+         * Создание объектов связанных чем-либо с другими объектами того же семейства
+*/
 
 #include <string>
 
@@ -10,13 +16,13 @@ namespace DesignPatterns {
         class Chair {
         public:
             virtual ~Chair() = default;
-            virtual std::string getChairType() = 0;
+            virtual std::string getChairType() const = 0;
         };
 
         class Table {
         public:
             virtual ~Table() = default;
-            virtual std::string getTableType() = 0;
+            virtual std::string getTableType() const = 0;
         };
 
         class FurnitureFactory {
@@ -29,12 +35,12 @@ namespace DesignPatterns {
 
         class KitchenChair : public Chair {
         public:
-            virtual std::string getChairType() override;
+            virtual std::string getChairType() const override;
         };
 
         class KitchenTable : public Table {
         public:
-            virtual std::string getTableType() override;
+            virtual std::string getTableType() const override;
         };
 
         class KitchenFurnitureFactory : public FurnitureFactory {
@@ -47,12 +53,12 @@ namespace DesignPatterns {
 
         class OfficeChair : public Chair {
         public:
-            virtual std::string getChairType() override;
+            virtual std::string getChairType() const override;
         };
 
         class OfficeTable : public Table {
         public:
-            virtual std::string getTableType() override;
+            virtual std::string getTableType() const override;
         };
 
         class OfficeFurnitureFactory : public FurnitureFactory {
